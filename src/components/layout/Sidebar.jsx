@@ -2,7 +2,7 @@ import MethodBadge from "../ui/MethodBadge";
 
 const Sidebar = () => {
     return (
-        <aside className="flex flex-col gap-7 p-8 h-screen sticky top-0 border-r border-rust/30">
+        <aside className="flex flex-col gap-7 p-8 h-screen sticky top-0 bg-paper">
             <p className="text-xs font-mono text-muted">
                 BASE_URL <span className="text-rust font-semibold">rohit</span>/api/v1
             </p>

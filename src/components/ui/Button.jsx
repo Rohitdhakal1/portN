@@ -1,13 +1,17 @@
-const base = "font-mono rounded-lg text-sm font-bold px-4 py-3";
+const base =
+    "inline-block font-mono text-sm font-bold px-4 py-3 rounded-lg border-2 transition hover:-translate-y-0.5";
 
-const variant = {
-    primary: "bg-rust text-white border-rust",
-    outline: "bg-ink text-ink border-ink"
-}
+const variants = {
+    primary: "bg-rust text-white border-rust shadow-[4px_4px_0_var(--color-ink)]",
+    outline: "bg-white text-ink border-ink hover:shadow-[4px_4px_0_var(--color-ink)]",
+};
 
-const Button = ({ variants = "primary" }) => {
+const Button = ({ href, variant = "primary", children }) => {
     return (
-        <a href='#' className={`${base} ${variant[variants]}`}></a>
-    )
-}
+        <a href={href} className={`${base} ${variants[variant]}`}>
+            {children}
+        </a>
+    );
+};
+
 export default Button;
