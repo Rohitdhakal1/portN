@@ -1,5 +1,9 @@
 import MethodBadge from "../components/ui/MethodBadge";
 import Button from "../components/ui/Button";
+import NowLog from "./NowLog";
+import Routes from "./Routes";
+import About from "./About";
+
 
 const Hero = () => {
     return (
@@ -26,6 +30,10 @@ const Hero = () => {
                 <Button href="#projects" variant="primary">Explore /projects ▶</Button>
                 <Button href="#contact" variant="outline">POST /contact</Button>
             </div>
+
+            <NowLog />
+            <Routes />
+            <About />
 
         </section>
     );

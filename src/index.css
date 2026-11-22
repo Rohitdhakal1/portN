@@ -10,12 +10,35 @@
     --color-rust: #c2410c;
     --color-ember: #f08a4b;
     --color-line: #d9cfbd;
+    --color-paper-2: #efe7d8;
 
     --animate-blink: blink 1s steps(1) infinite;
 
     @keyframes blink {
         50% {
             opacity: 0;
+        }
+    }
+
+    --animate-wink: wink 4s infinite;
+    --animate-step: step 0.32s steps(1) infinite;
+
+    @keyframes wink {
+
+        0%,
+        94%,
+        100% {
+            transform: scaleY(1);
+        }
+
+        97% {
+            transform: scaleY(0.1);
+        }
+    }
+
+    @keyframes step {
+        50% {
+            height: 3px;
         }
     }
 }

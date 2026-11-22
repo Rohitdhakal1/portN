@@ -1,4 +1,6 @@
+import { routes } from "../../data/routes";
 import MethodBadge from "../ui/MethodBadge";
+import Mascot from "../Mascot";
 
 const Sidebar = () => {
     return (
@@ -22,22 +24,19 @@ const Sidebar = () => {
             </p>
 
             <nav className="flex flex-col gap-1 font-mono text-sm">
-                <a href="#home" className="flex items-center gap-2 px-2 py-1.5 rounded-lg border border-transparent hover:border-ink/10 hover:bg-white hover:translate-x-1 hover:scale-[1.02] transition">
-                    <MethodBadge method="GET" />/
-                </a>
-                <a href="#about" className="flex items-center gap-2 px-2 py-1.5 rounded-lg border border-transparent hover:border-ink/10 hover:bg-white hover:translate-x-1 hover:scale-[1.02] transition">
-                    <MethodBadge method="GET" />/about
-                </a>
-                <a href="#projects" className="flex items-center gap-2 px-2 py-1.5 rounded-lg border border-transparent hover:border-ink/10 hover:bg-white hover:translate-x-1 hover:scale-[1.02] transition">
-                    < MethodBadge method="GET" />/projects
-                </a >
-                <a href="#offduty" className="flex items-center gap-2 px-2 py-1.5 rounded-lg border border-transparent hover:border-ink/10 hover:bg-white hover:translate-x-1 hover:scale-[1.02] transition">
-                    < MethodBadge method="GET" />/off-duty
-                </a >
-                <a href="#contact" className="flex items-center gap-2 px-2 py-1.5 rounded-lg border border-transparent hover:border-ink/10 hover:bg-white hover:translate-x-1 hover:scale-[1.02] transition">
-                    < MethodBadge method="POST" />/contact
-                </a >
-            </nav >
+                {routes.map((r) => (
+                    <a
+                        key={r.path}
+                        href={r.href}
+                        className="flex items-center gap-2 px-2 py-1.5 rounded-lg border border-transparent hover:border-ink/10 hover:bg-white hover:translate-x-1 hover:scale-[1.02] transition"
+                    >
+                        <MethodBadge method={r.method} />
+                        {r.path}
+                    </a>
+                ))}
+            </nav>
+
+            <Mascot />
 
             <div className="flex gap-4 font-mono text-sm mt-auto">
                 <a className="border-b-2 border-rust" href="#">GitHub</a>
