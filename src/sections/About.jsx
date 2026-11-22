@@ -1,6 +1,14 @@
 import { useEffect, useState } from "react";
 import EndpointSection from "../components/ui/EndpointSection";
 
+
+const prettyJson = (obj) =>
+    JSON.stringify(obj, null, 2).replace(
+        /\[\s+([^\]]*?)\s+\]/g,
+        (match, inside) => "[" + inside.replace(/\s*\n\s*/g, " ") + "]"
+    );
+
+
 const About = () => {
     const [data, setData] = useState(null);
     const [loading, setLoading] = useState(true);
@@ -50,7 +58,7 @@ const About = () => {
 
     return (
         <EndpointSection id="about" method="GET" path="/about" status={status} action={sendButton}>
-            <div className="min-h-[220px]">
+            <div className="min-h-[180px]">
                 {loading ? (
                     <div className="flex flex-col gap-3">
                         {[40, 60, 50, 75, 70, 45].map((w, i) => (
@@ -58,8 +66,8 @@ const About = () => {
                         ))}
                     </div>
                 ) : (
-                    <pre className="font-mono text-sm leading-7 whitespace-pre-wrap">
-                        {JSON.stringify(data, null, 2)}
+                    <pre className="font-mono text-sm leading-6 whitespace-pre-wrap">
+                        {prettyJson(data)}
                     </pre>
                 )}
             </div>
@@ -67,7 +75,7 @@ const About = () => {
             <p className="text-lg max-w-[60ch] mt-5 pt-5 border-t border-dashed border-line">
                 I build complete web apps: <em className="text-rust">clean interfaces</em> people
                 enjoy using, and <em className="text-rust">solid backends</em> with caching and auth
-                that keep them fast and safe.
+                that keep them fast and safe. Lately I've been turning things I actually use into tools other people can use too.
             </p>
         </EndpointSection>
     );
