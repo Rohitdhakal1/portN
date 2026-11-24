@@ -44,7 +44,7 @@ const Sidebar = () => {
 
             <div className="flex gap-4 font-mono text-sm">
                 <a className="border-b-2 border-rust" href="https://github.com/Rohitdhakal1" target="_blank" rel="noreferrer">GitHub</a>
-                <a className="border-b-2 border-rust" href="YOUR_LINKEDIN_URL" target="_blank" rel="noreferrer">LinkedIn</a>
+                <a className="border-b-2 border-rust" href="https://www.linkedin.com/in/rohitdhakal/" target="_blank" rel="noreferrer">LinkedIn</a>
                 <a className="border-b-2 border-rust" href="/Rohit_Dhakal_Resume.pdf" target="_blank" rel="noreferrer">Resume.pdf</a>
             </div>
         </aside>
