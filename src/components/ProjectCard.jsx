@@ -5,7 +5,7 @@ const ProjectCard = ({ project }) => {
     const { name, status, description, flow = [], hot, metrics = [], stack = [], links = {} } = project;
 
     return (
-        <article className="relative bg-white border border-line rounded-lg p-5 transition hover:-translate-x-0.5 hover:-translate-y-0.5 hover:border-ink hover:shadow-[4px_4px_0_var(--color-rust)]">
+        <article className="relative bg-card border border-line rounded-lg p-5 transition hover:-translate-x-0.5 hover:-translate-y-0.5 hover:border-ink hover:shadow-[4px_4px_0_var(--color-rust)]">
             {status === "in-progress" && (
                 <span className="absolute -top-2.5 right-4 font-mono text-[10.5px] font-bold tracking-wide bg-rust text-white px-2 py-0.5 rounded">
                     IN PROGRESS
@@ -25,9 +25,9 @@ const ProjectCard = ({ project }) => {
             <div className="flex flex-wrap items-center gap-1.5 mt-4 font-mono text-xs">
                 {flow.map((node, i) => (
                     <Fragment key={node}>
-                        {i > 0 && <span className="text-rust font-bold">→</span>}
+                        {i > 0 && <span className="text-accent font-bold">→</span>}
                         <span
-                            className={`border-[1.5px] rounded-md px-2 py-1 ${node === hot ? "bg-orange-100 border-rust text-rust font-semibold" : "border-ink bg-paper"
+                            className={`border-[1.5px] rounded-md px-2 py-1 ${node === hot ? "bg-orange-100 border-rust text-accent font-semibold" : "border-ink bg-paper"
                                 }`}
                         >
                             {node}
@@ -39,7 +39,7 @@ const ProjectCard = ({ project }) => {
             {metrics.length > 0 && (
                 <div className="flex flex-wrap gap-2 mt-3">
                     {metrics.map((m) => (
-                        <span key={m} className="font-mono text-xs font-semibold bg-green-100 text-green-700 px-2.5 py-1 rounded-full">{m}</span>
+                        <span key={m} className="font-mono text-xs font-semibold bg-green-100 text-ok px-2.5 py-1 rounded-full">{m}</span>
                     ))}
                 </div>
             )}

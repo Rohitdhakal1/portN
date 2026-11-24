@@ -40,9 +40,9 @@ const Contact = () => {
 
     const status =
         state === "sending" ? (
-            <span className="text-rust font-bold">pending…</span>
+            <span className="text-accent font-bold">pending…</span>
         ) : state === "sent" ? (
-            <span className="text-green-700 font-bold">{code} OK · thanks, I'll reply soon</span>
+            <span className="text-ok font-bold">{code} OK · thanks, I'll reply soon</span>
         ) : state === "error" ? (
             <span className="text-red-700 font-bold">failed · try emailing me directly</span>
         ) : (
@@ -60,7 +60,7 @@ const Contact = () => {
                     value={email}
                     onChange={(e) => setEmail(e.target.value)}
                     placeholder="you@company.com"
-                    className="font-mono text-sm px-3 py-2.5 border-2 border-ink rounded-lg bg-white focus:outline-2 focus:outline-rust"
+                    className="font-mono text-sm px-3 py-2.5 border-2 border-ink rounded-lg bg-card focus:outline-2 focus:outline-rust"
                 />
 
                 <label className="font-mono text-xs text-muted" htmlFor="message">"message"</label>
@@ -70,7 +70,7 @@ const Contact = () => {
                     value={message}
                     onChange={(e) => setMessage(e.target.value)}
                     placeholder="Hi Rohit, we're hiring for…"
-                    className="font-mono text-sm px-3 py-2.5 border-2 border-ink rounded-lg bg-white min-h-24 resize-y focus:outline-2 focus:outline-rust"
+                    className="font-mono text-sm px-3 py-2.5 border-2 border-ink rounded-lg bg-card min-h-24 resize-y focus:outline-2 focus:outline-rust"
                 />
 
                 <button

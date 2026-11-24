@@ -5,14 +5,14 @@ const base = "font-mono font-bold text-[10.5px] uppercase tracking-wide px-2 py-
 
 const stateStyles = {
     building: "bg-rust text-white",
-    planned: "bg-orange-100 text-rust",
-    reading: "bg-green-100 text-green-700",
+    planned: "bg-orange-100 text-accent",
+    reading: "bg-green-100 text-ok",
     open: "border border-ink text-ink",
 };
 
 const NowLog = () => {
     return (
-        <div className="bg-white border-1 border-ink rounded-lg overflow-hidden">
+        <div className="bg-card border-1 border-ink rounded-lg overflow-hidden">
             <div className=" flex justify-between item-center px-4 py-2.5 border-b border-line font-mono text-sm font-semibold bg-paper-2">
                 <span className="flex item-center gap-2"><MethodBadge method="GET" /> /now</span>
                 <span className="text-muted text-xs font-normal"> updated [{nowUpdated}]</span>

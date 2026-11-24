@@ -31,8 +31,8 @@ const About = () => {
             </div>
 
             <p className="text-lg max-w-[60ch] mt-5 pt-5 border-t border-dashed border-line">
-                I build complete web apps: <em className="text-rust">clean interfaces</em> people
-                enjoy using, and <em className="text-rust">solid backends</em> with caching and auth
+                I build complete web apps: <em className="text-accent">clean interfaces</em> people
+                enjoy using, and <em className="text-accent">solid backends</em> with caching and auth
                 that keep them fast and safe. Lately I've been turning things I actually use into tools other people can use too.
             </p>
         </EndpointSection>

@@ -1,5 +1,19 @@
 @import "tailwindcss";
 
+@custom-variant dark (&:where([data-theme="dark"], [data-theme="dark"] *));
+
+[data-theme="dark"] {
+    --color-paper: #15120e;
+    --color-paper-2: #1c1813;
+    --color-card: #241e18;
+    --color-ink: #f1e9dc;
+    --color-muted: #a89d8b;
+    --color-line: #2f2820;
+    --color-accent: #f08a4b;
+    --color-ok: #4ade80;
+}
+
+
 @theme {
     --font-mono: "Cascadia Code", "JetBrains Mono", Consolas, monospace;
     --font-serif: "Palatino Linotype", Palatino, Georgia, serif;
@@ -11,6 +25,9 @@
     --color-ember: #f08a4b;
     --color-line: #d9cfbd;
     --color-paper-2: #efe7d8;
+    --color-card: #ffffff;
+    --color-accent: #c2410c;
+    --color-ok: #15803d;
 
     --animate-blink: blink 1s steps(1) infinite;
 

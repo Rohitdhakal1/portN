@@ -75,7 +75,7 @@ const Mascot = () => {
                 onClick={() => say(lines[Math.floor(Math.random() * lines.length)])}
             >
                 {bubble && (
-                    <div className="absolute bottom-full mb-3 left-1/2 -translate-x-1/2 whitespace-nowrap font-mono text-[11px] font-semibold bg-white border-2 border-ink rounded-md px-2 py-1">
+                    <div className="absolute bottom-full mb-3 left-1/2 -translate-x-1/2 whitespace-nowrap font-mono text-[11px] font-semibold bg-card border-2 border-ink rounded-md px-2 py-1">
                         {bubble}
                     </div>
                 )}

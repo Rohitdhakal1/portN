@@ -3,7 +3,7 @@ const base =
 
 const variants = {
     primary: "bg-rust text-white border-rust shadow-[4px_4px_0_var(--color-ink)]",
-    outline: "bg-white text-ink border-ink hover:shadow-[4px_4px_0_var(--color-ink)]",
+    outline: "bg-card text-ink border-ink hover:shadow-[4px_4px_0_var(--color-ink)]",
 };
 
 const Button = ({ href, variant = "primary", children }) => {
