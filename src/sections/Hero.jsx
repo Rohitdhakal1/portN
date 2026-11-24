@@ -2,14 +2,10 @@ import MethodBadge from "../components/ui/MethodBadge";
 import Button from "../components/ui/Button";
 import NowLog from "./NowLog";
 import Routes from "./Routes";
-import About from "./About";
-import Project from "./Projects";
-
 
 const Hero = () => {
     return (
-        <section id="home" className="min-h-screen flex flex-col justify-center gap-8">
-
+        <section id="home" className="flex flex-col gap-8 pt-20">
             <div className="flex w-fit items-center gap-2 self-start font-mono font-semibold bg-white border-2 border-ink rounded-lg px-4 py-2 shadow-[4px_4px_0_var(--color-ink)]">
                 <MethodBadge method="GET" />
                 <span>/</span>
@@ -34,9 +30,6 @@ const Hero = () => {
 
             <NowLog />
             <Routes />
-            <About />
-            <Project />
-
         </section>
     );
 };
