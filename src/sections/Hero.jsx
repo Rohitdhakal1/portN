@@ -3,6 +3,7 @@ import Button from "../components/ui/Button";
 import NowLog from "./NowLog";
 import Routes from "./Routes";
 import About from "./About";
+import Project from "./Projects";
 
 
 const Hero = () => {
@@ -34,6 +35,7 @@ const Hero = () => {
             <NowLog />
             <Routes />
             <About />
+            <Project />
 
         </section>
     );
