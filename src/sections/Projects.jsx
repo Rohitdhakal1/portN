@@ -1,10 +1,10 @@
 import EndpointSection from "../components/ui/EndpointSection";
 import ProjectCard from "../components/ProjectCard";
 
-import { useEndpoint } from "../hook/usEndpoint";
+import { useEndpoint } from "../hooks/useEndpoint";
 
 const Projects = () => {
-    const request = useEndpoint("/api/projects.js");
+    const request = useEndpoint("/api/projects.json");
     const projects = request.data || [];
 
     return (

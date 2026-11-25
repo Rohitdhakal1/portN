@@ -1,5 +1,5 @@
 import EndpointSection from "../components/ui/EndpointSection";
-import { useEndpoint } from "../hook/usEndpoint.js";
+import { useEndpoint } from "../hooks/useEndpoint.js";
 
 const OffDuty = () => {
     const request = useEndpoint("/api/off-duty.json");

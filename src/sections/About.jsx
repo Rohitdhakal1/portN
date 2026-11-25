@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import EndpointSection from "../components/ui/EndpointSection";
-import { useEndpoint } from "../hook/usEndpoint";
+import { useEndpoint } from "../hooks/useEndpoint";
 
 
 

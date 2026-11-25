@@ -1,6 +1,6 @@
 import { routes } from "../../data/routes";
 import MethodBadge from "../ui/MethodBadge";
-import Mascot from "../../common/Mascot";
+import Mascot from "../Mascot";
 import ThemeToggle from "../ThemeToggle";
 
 const Sidebar = () => {
