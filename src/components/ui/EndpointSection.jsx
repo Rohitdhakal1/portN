@@ -18,7 +18,7 @@ const EndpointSection = ({ id, method, path, query, request, meta, status, child
     );
 
     return (
-        <section id={id} className="scroll-mt-8">
+        <section id={id} className="scroll-mt-8 w-full max-w-5xl mx-auto">
             <div className="flex items-center gap-3 font-mono bg-card border-2 border-ink rounded-t-lg px-4 py-3">
                 <MethodBadge method={method} />
                 <span className="font-semibold">{path}</span>

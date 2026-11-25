@@ -9,7 +9,7 @@ const App = () => {
   return (
     <div className="grid grid-cols-[320px_1fr] min-h-screen">
       <Sidebar />
-      <main className="pl-20 pr-14 pb-24 flex flex-col gap-14 max-w-5xl">
+      <main className="w-full max-w-5xl mx-auto px-12 pb-24 flex flex-col gap-14">
         <Hero />
         <About />
         <Projects />
