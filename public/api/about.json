@@ -1,0 +1,18 @@
+{
+    "name": "Rohit",
+    "role": "Full-Stack Developer",
+    "location": "India",
+    "frontend": [
+        "React",
+        "Tailwind CSS"
+    ],
+    "backend": [
+        "Node.js",
+        "Express",
+        "TypeScript",
+        "MongoDB",
+        "Redis"
+    ],
+    "currently": "building this portfolio",
+    "available": true
+}

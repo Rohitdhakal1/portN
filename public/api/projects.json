@@ -1,0 +1,42 @@
+[
+    {
+        "name": "ShrinkIt",
+        "status": "live",
+        "description": "URL shortener with unique short-code generation and click analytics. Redirects use the cache-aside pattern: Redis first, MongoDB fallback, cached with a TTL.",
+        "flow": ["Client", "Express API", "Redis cache", "MongoDB"],
+        "hot": "Redis cache",
+        "features": ["Cache-aside redirects", "TTL-based caching", "Click analytics"],
+        "stack": ["TypeScript", "Node.js", "Express", "MongoDB", "Redis", "React", "Tailwind CSS"],
+        "links": { "live": null, "github": "https://github.com/Rohitdhakal1/ShrinkIt_urlShortner" }
+    },
+    {
+        "name": "AI Health Tracker",
+        "status": "github",
+        "description": "Uses Google Gemini to turn plain-text meals and workouts into structured data (calories, macros, duration). Sets personalised daily calorie goals with BMR, and falls back to manual entry if the AI analysis fails.",
+        "flow": ["Client", "Express API", "Gemini API", "MongoDB"],
+        "hot": "Gemini API",
+        "features": ["14 REST endpoints", "JWT + bcrypt auth", "Joi validation"],
+        "stack": ["TypeScript", "Node.js", "Express", "MongoDB", "Gemini API", "React", "React Router"],
+        "links": { "live": null, "github": "https://github.com/Rohitdhakal1/Ai-HealthTracking" }
+    },
+    {
+        "name": "Subscription Management API",
+        "status": "github",
+        "description": "Backend API that schedules automated email reminders 7, 5, 2, and 1 days before a subscription renews. Secured with JWT, plus Arcjet for bot detection and rate limiting.",
+        "flow": ["Client", "Arcjet", "Express API", "Upstash Workflow", "Nodemailer", "MongoDB"],
+        "hot": "Upstash Workflow",
+        "features": ["4 reminder stages", "Token-bucket rate limiting", "Auto renewal-date calc"],
+        "stack": ["Node.js", "Express", "MongoDB", "Upstash Workflow", "Nodemailer", "Arcjet"],
+        "links": { "live": null, "github": "https://github.com/Rohitdhakal1/Subscriptions_tracker-backend-only-" }
+    },
+    {
+        "name": "IdeasAnswer",
+        "status": "github",
+        "description": "Notes app that answers questions about your saved notes using a locally hosted Llama 3 model. AI responses are cached in Redis to cut repeated model calls.",
+        "flow": ["Client", "Express API", "Redis cache", "Ollama (Llama 3)", "MongoDB"],
+        "hot": "Ollama (Llama 3)",
+        "features": ["1h Redis cache for AI answers", "Full notes CRUD", "httpOnly cookie JWT"],
+        "stack": ["Node.js", "Express", "MongoDB", "Redis", "Ollama (Llama 3)", "React"],
+        "links": { "live": null, "github": "https://github.com/Rohitdhakal1/IdeasAnswer" }
+    }
+]
