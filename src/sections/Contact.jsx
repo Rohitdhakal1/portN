@@ -15,7 +15,7 @@ const Contact = () => {
                 method: "POST",
                 headers: { "Content-Type": "application/json", Accept: "application/json" },
                 body: JSON.stringify({
-                    access_key: 'import.meta.env.VITE_WEB3FORMS_KEY',
+                    access_key:import.meta.env.VITE_WEB3FORMS_KEY,
                     subject: "New message from portfolio",
                     email,
                     message,
